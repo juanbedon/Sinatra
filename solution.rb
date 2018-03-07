@@ -1,6 +1,5 @@
 require 'sinatra'
 
-get '/' do
-	@nombre = params["nombre"] ? params["nombre"] : "desconocido!"
-  erb :index	
+get '/:nombre' do
+  "Hola #{params[:nombre]}"
 end

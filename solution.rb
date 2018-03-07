@@ -1,5 +1,5 @@
 require 'sinatra'
 
 get '/:nombre' do
-  "Hola #{params[:nombre]}"
+  "Hola #{params[:nombre]}!"
 end

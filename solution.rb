@@ -1,18 +1,8 @@
 require 'sinatra'
 
-get '/' do
-	unless params[:nombre]
-		"Hola mundo"
-	else
-		"Hola #{params[:nombre]}"
-	end
-	erb :index
-end
-
-get '/:nombre' do
-  @nombre = "#{params['nombre'] ? params['nombre'].capitalize : 'desconocido!'}!"
-erb :index
-	"Hola #{params[:nombre]}"
+get '/makers/:nombre' do
+  @nombre = (params["nombre"] ? params["nombre"] : "desconocido!").capitalize
+ erb :index
 end
 
 =begin

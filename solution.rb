@@ -1,6 +1,6 @@
 require 'sinatra'
 
 get '/' do
-	@nombre = "Juan!"
+	@nombre = params["nombre"] ? params["nombre"] : "desconocido!"
   erb :index	
 end

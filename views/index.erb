@@ -5,8 +5,9 @@
   <title>Hola Sinatra</title>
 </head>
 <body>
-  <% 5.times do %>	
-    <h1>Hola <%= @nombre %></h1>
+  <% if @nombre != "Juan!"
+    "desconocido!" %>	
   <% end %>
+    <h1>Hola <%= @nombre %></h1>
 </body>
 </html>

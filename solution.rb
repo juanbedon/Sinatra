@@ -1,7 +1,6 @@
 require 'sinatra'
 
 get '/:nombre' do
-  "Hola #{params[:nombre]}!"
   @nombre = "#{params['nombre'] ? params['nombre'].capitalize : 'desconocido!'}!"
-  erb :index
+erb :index
 end
